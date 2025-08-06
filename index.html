@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiryzz Store - Toko Online Terpercaya</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="logo-container">
+                <img src="https://files.catbox.moe/7qudw3.jpg" alt="Kiryzz Store" class="loading-logo">
+            </div>
+            <h1 class="loading-title">KIRYZZ STORE</h1>
+            <div class="loading-spinner">
+                <div class="spinner"></div>
+            </div>
+            <p class="loading-text">Memuat produk terbaik untuk Anda...</p>
+        </div>
+    </div>
+
+    <!-- Snow Overlay -->
+    <div class="snow-container" id="snowContainer"></div>
+
+    <!-- Main Content -->
+    <div class="main-content" id="mainContent" style="display: none;">
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <div class="logo">
+                    <img src="https://files.catbox.moe/7qudw3.jpg" alt="Kiryzz Store">
+                    <h1>KIRYZZ STORE</h1>
+                </div>
+                <nav class="nav">
+                    <a href="#products" class="nav-link">Produk</a>
+                    <a href="#payment" class="nav-link">Pembayaran</a>
+                    <a href="#contact" class="nav-link">Kontak</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Selamat Datang di Kiryzz Store</h2>
+                <p>Toko online terpercaya dengan produk berkualitas dan harga terjangkau</p>
+                <button class="cta-button" onclick="scrollToProducts()">Lihat Produk</button>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="products-section">
+            <div class="container">
+                <h2 class="section-title">Produk Terbaru</h2>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <img src="https://files.catbox.moe/dxd2lr.jpg" alt="Website Payment 1">
+                        <div class="product-info">
+                            <h3>Website Payment 1</h3>
+                            <p class="price">Rp 5.000</p>
+                            <p class="description">Request Nama Website Nomor Dana Nomor OVO Nomor Gopay Send Qris Request Background Request Logo Request Sound</p>
+                            <button class="buy-button" onclick="selectProduct('Website Payment 1', 5000)">Beli Sekarang</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="https://files.catbox.moe/gl7uly.jpg" alt="Produk 2">
+                        <div class="product-info">
+                            <h3>Webiste Payment 2</h3>
+                            <p class="price">Rp 6.000</p>
+                            <p class="description">Request Nama Website Nomor Dana Nomor OVO Nomor Gopay Send Qris Request Background Request Logo Request Sound</p>
+                            <button class="buy-button" onclick="selectProduct('Website Payment 2', 6000)">Beli Sekarang</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="https://files.catbox.moe/hhqf9x.jpg" alt="Produk 3">
+                        <div class="product-info">
+                            <h3>Website Payment 3</h3>
+                            <p class="price">Rp 7.000</p>
+                            <p class="description">Request Nama Website Nomor Dana Nomor OVO Nomor Gopay Send Qris Request Background Request Logo Request Sound</p>
+                            <button class="buy-button" onclick="selectProduct('Website Payment 3', 7000)">Beli Sekarang</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="https://files.catbox.moe/pvpar1.jpg" alt="Produk 4">
+                        <div class="product-info">
+                            <h3>Website Payment 4</h3>
+                            <p class="price">Rp 8.000</p>
+                            <p class="description">Request Nama Website Nomor Dana Nomor OVO Nomor Gopay Send Qris Request Background Request Logo Request Sound</p>
+                            <button class="buy-button" onclick="selectProduct('Website Payment 4', 8000)">Beli Sekarang</button>
+                        </div>
+                        <div class="product-card">
+                        <img src="https://files.catbox.moe/1q6igy.jpg" alt="Produk 5">
+                        <div class="product-info">
+                            <h3>Website Payment 5</h3>
+                            <p class="price">Rp 4.000</p>
+                            <p class="description">Request Nama Website Nomor Dana Nomor OVO Nomor Gopay Send Qris Request Background Request Logo Request Sound</p>
+                            <button class="buy-button" onclick="selectProduct('Website Payment 5', 4000)">Beli Sekarang</button>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Payment Section -->
+        <section id="payment" class="payment-section">
+            <div class="container">
+                <h2 class="section-title">Metode Pembayaran</h2>
+                <div class="payment-methods">
+                    <div class="payment-card">
+                        <i class="fas fa-wallet"></i>
+                        <h3>DANA</h3>
+                        <p>0882015857798</p>
+                        <button class="copy-button" onclick="copyToClipboard('0882015857798', 'DANA')">
+                            <i class="fas fa-copy"></i> Salin Nomor
+                        </button>
+                    </div>
+
+                    <div class="payment-card">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>OVO</h3>
+                        <p>6283190336544</p>
+                        <button class="copy-button" onclick="copyToClipboard('6283190336544', 'OVO')">
+                            <i class="fas fa-copy"></i> Salin Nomor
+                        </button>
+                    </div>
+
+                    <div class="payment-card">
+                        <i class="fas fa-money-bill-wave"></i>
+                        <h3>GoPay</h3>
+                        <p>6283190336544</p>
+                        <button class="copy-button" onclick="copyToClipboard('6283190336544', 'GoPay')">
+                            <i class="fas fa-copy"></i> Salin Nomor
+                        </button>
+                    </div>
+
+                    <div class="payment-card qris-card">
+                        <i class="fas fa-qrcode"></i>
+                        <h3>QRIS</h3>
+                        <img src="https://files.catbox.moe/a3f5v7.jpeg" alt="QRIS" class="qris-image">
+                        <button class="copy-button" onclick="copyQris()">
+                            <i class="fas fa-download"></i> Unduh QRIS
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Order Form -->
+        <section class="order-section">
+            <div class="container">
+                <h2 class="section-title">Form Pemesanan</h2>
+                <form class="order-form" id="orderForm">
+                    <div class="form-group">
+                        <label for="orderId">ID Pesanan</label>
+                        <input type="text" id="orderId" readonly>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="whatsapp">Nomor WhatsApp</label>
+                        <input type="tel" id="whatsapp" placeholder="08xxxxxxxxxx" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="transactionId">ID Transaksi</label>
+                        <input type="text" id="transactionId" readonly>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="selectedProduct">Produk</label>
+                        <input type="text" id="selectedProduct" readonly>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="paymentMethod">Metode Pembayaran</label>
+                        <select id="paymentMethod" required>
+                            <option value="">Pilih Metode Pembayaran</option>
+                            <option value="DANA">DANA</option>
+                            <option value="OVO">OVO</option>
+                            <option value="GoPay">GoPay</option>
+                            <option value="QRIS">QRIS</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="proofImage">Bukti Transfer</label>
+                        <input type="file" id="proofImage" accept="image/*" required>
+                        <div class="image-preview" id="imagePreview"></div>
+                    </div>
+
+                    <button type="submit" class="submit-button">
+                        <i class="fab fa-telegram"></i> Kirim ke Telegram
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>Kiryzz Store</h3>
+                        <p>Toko online terpercaya dengan produk berkualitas</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Kontak</h3>
+                        <p><i class="fab fa-whatsapp"></i> 6283170618607</p>
+                        <p><i class="fab fa-telegram"></i> @Kiryzz_official</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Kiryzz Store. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Background Music -->
+    <audio id="backgroundMusic" loop>
+        <source src="https://files.catbox.moe/lq34ex.mp3" type="audio/wav">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
